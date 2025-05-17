@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Burger Bliss</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">🍔 Burger Bliss</div>
+    <div class="burger-menu" id="burger-menu">☰</div>
+    <nav id="nav-links" class="nav-links">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reservation">Reservation</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#location" class="location-btn">Location</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1>Juicy, Grilled, and Unforgettable</h1>
+      <p>Your new favorite burger is just a bite away.</p>
+      <button class="cta-btn" onclick="window.location.href='#menu'">Explore Our Menu</button>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu-section">
+    <h2>Our Signature Burgers</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="./assets/burger1.jpg" alt="Classic Cheeseburger"/>
+        <h3>Classic Cheeseburger</h3>
+        <p>Beef patty, cheddar cheese, lettuce, tomato, and our secret sauce.</p>
+        <span class="price">$8.99</span>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+      <div class="menu-item">
+        <img src="./assets/burger2.jpg" alt="BBQ Bacon Burger"/>
+        <h3>BBQ Bacon Burger</h3>
+        <p>Smoky BBQ sauce, crispy bacon, grilled onions, and cheddar.</p>
+        <span class="price">$9.99</span>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+      <div class="menu-item">
+        <img src="./assets/burger3.jpg" alt="Buffalo Chicken Burger"/>
+        <h3>Buffalo Chicken Burger</h3>
+        <p>Crispy chicken breast, spicy mayo, pickles, and slaw.</p>
+        <span class="price">$7.99</span>
+        <button class="add-to-cart">Add to Cart</button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section id="reservation" class="reservation-section">
+    <h2>Make a Reservation</h2>
+    <p>Reserve your table at Burger Bliss for a memorable experience!</p>
+    <form id="reservation-form" class="reservation-form" method="POST" action="ReservationServlet">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+      </div>
+      <div class="form-group">
+        <label for="date">Reservation Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+      <div class="form-group">
+        <label for="time">Reservation Time</label>
+        <input type="time" id="time" name="time" required />
+      </div>
+      <div class="form-group">
+        <label for="Members">Number of Members</label>
+        <input type="number" id="Members" name="Members" required min="1" max="50" placeholder="Enter number of Members" />
+      </div>
+      <button type="submit" class="cta-btn">Submit Reservation</button>
+    </form>
+  </section>
+  
+  <section id="location" class="location-section">
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.459596482347!2d71.4222329!3d34.03207990000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d911b1efdb0e73%3A0x1fbc0e99fa8a3f93!2sBurger%20Bliss%20Fast%20Food%20Restaurant!5e0!3m2!1sen!2s!4v1746025537615!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+   <div>
+  </div>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Visit us at: SHAGO HOUSE</p>
+    <p>Call us: +92 328-7096603</p>
+    <form id="contact-form">
+      <input type="text" id="contact-name" required placeholder="Your Name">
+      <input type="email" id="contact-email" required placeholder="Your Email">
+      <textarea id="contact-message" required placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

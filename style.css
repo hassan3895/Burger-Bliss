@@ -1,0 +1,326 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #1a1a1a;
+  --accent-color: #e63946;
+  --hero-bg: url('hero-bg.png');
+  --banner-bg: #f7e3e5;
+}
+
+[data-theme='dark'] {
+  --bg-color: #1a1a1a;
+  --text-color: #f1f1f1;
+  --accent-color: #f77f00;
+  --banner-bg: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+
+.order-now-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Adjust the height as needed */
+  background: url('./assets/file_00000000c9246230983345edc0fa1d9f_conversation_id=67ffbf0d-e034-8001-b60d-499026b35cd2&message_id=b1fb87ae-588d-4d3e-ba1c-bb60a221d9fe.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-content {
+  z-index: 2; /* Ensures content appears above background */
+}
+
+.cta-btn {
+  background-color: #f8a200; /* Customize button color */
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #d88500;
+}
+
+
+
+/* MENU SECTION */
+.menu-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item {
+  background: #a0a0a0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.menu-item .price {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+.add-to-cart, .buy-now {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+  background-color: #ff8c00;
+  color: white;
+}
+
+.add-to-cart:hover {
+  background-color: #967259;
+}
+
+.buy-now {
+  background-color: #ff5a00;
+  color: white;
+}
+
+.buy-now:hover {
+  background-color: #d9534f;
+}
+
+/* RESERVATION FORM STYLES */
+.reservation-section {
+  padding: 3rem 2rem;
+  background-color: #a5a5a5;
+  text-align: center;
+}
+
+.reservation-section h2 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.reservation-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.reservation-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.form-group input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.cta-btn {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #d85c00;
+}
+
+
+#thank-you-message {
+  font-weight: bold;
+  color: green;
+}
+
+
+@media (max-width: 768px) {
+  .reservation-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #837d7d;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #968888;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.contact form button {
+  padding: 15px 30px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.checkout-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.checkout-container h1,
+.checkout-container h2,
+.checkout-container p {
+  text-align: center;
+}
+
+.checkout-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.checkout-container input,
+.checkout-container select,
+.checkout-container button {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
